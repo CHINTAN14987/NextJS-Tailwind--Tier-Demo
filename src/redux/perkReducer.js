@@ -3,7 +3,7 @@ import data from "./perks.json";
 const perkReducer = createSlice({
   name: "perk",
   initialState: {
-    perks: data.slice(0, 4),
+    perks: data,
     formFields: {
       tierName: "SuperCross",
       class: "Tier II",
@@ -30,7 +30,10 @@ const perkReducer = createSlice({
       return { ...state, perks: copyListItems };
     },
     deletePerk: (state, action) => {
-      return state.perks.filter((item) => item.id !== action.payload);
+      return {
+        ...state,
+        perks: state.perks.filter((item) => item.id !== action.payload),
+      };
     },
     editPerkForm: (state, action) => {
       const { name, value } = action.payload;

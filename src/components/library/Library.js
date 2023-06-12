@@ -3,7 +3,6 @@ import { notification } from "antd";
 import Image from "next/image";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import perkList from "../../redux/perks.json";
 import add from "/public/Images/add.png";
 const Library = () => {
   const disptach = useDispatch();
@@ -15,7 +14,7 @@ const Library = () => {
       notification.error({
         message: (
           <h3 className="border-t-4 border-red-500 py-2 text-black text-lg font-bold leading-6 m-0">
-            {perk.title} is already available in perk list
+            {perk.title} Perk is already available in perk list
           </h3>
         ),
         closable: false,
@@ -54,7 +53,7 @@ const Library = () => {
     <div>
       <div className="py-8">
         <h3 className="text-xl text-center font-bold mb-8">Perks Library</h3>
-        {perkList?.map((perk) => {
+        {perkData?.map((perk) => {
           return (
             <div
               className="flex items-center space-x-4 bg-transparent-black border rounded-xl border-gray-200 shadow-custom-box-shadow p-3 my-4"
