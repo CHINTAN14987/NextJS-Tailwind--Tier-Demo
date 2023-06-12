@@ -153,7 +153,7 @@ const InitialForm = () => {
             name="description"
             placeholder="Enter description."
             className={`h-36 pl-3 outline-none cursor-pointer bg-white bg-opacity-100 font-semibold text-base leading-6 rounded-lg placeholder:text-xl p-4 text-custom-gray ${
-              validation && !inputFields?.description?.trim()
+              validation && words?.length > 180
                 ? "border-red-500 border"
                 : "border border-opacity-6"
             }`}
