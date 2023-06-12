@@ -1,0 +1,36 @@
+[
+  { "id": 1, "title": "Access to exclusive content" },
+  {
+    "id": 2,
+    "title": "Chat with creator via Properchat",
+    "description": "Subscriber will gain access to message the creator via Properchat direct message"
+  },
+  { "id": 3, "title": "support for the creator" },
+  {
+    "id": 4,
+    "title": "Access to the fanswall",
+    "description": "Subscriber will be able to message on creator's Fanswall"
+  },
+  {
+    "id": 5,
+    "title": "Early Access to youtube videos"
+  },
+  {
+    "id": 6,
+    "title": "Watch Livestreams"
+  },
+  {
+    "id": 7,
+    "title": "Become member of the creator Properchat Group",
+    "description": "Subscriber will become member of creator Properchat group"
+  },
+  {
+    "id": 8,
+    "title": "Download attached files",
+    "description": "Subscriber will be able to download any attached files on creator posts"
+  },
+  {
+    "id": 9,
+    "title": "recieve the creator merch"
+  }
+]
