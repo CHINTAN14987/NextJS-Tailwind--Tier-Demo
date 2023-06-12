@@ -7,11 +7,9 @@ import { deletePerk, dragPerkList } from "@/redux/perkReducer";
 import { Modal } from "antd";
 import CreatePerk from "../CreatePerk/CreatePerk";
 import Library from "../library/Library";
-import { store } from "@/redux/store";
 
 const Perks = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  console.log(store.getState());
   const perkList = useSelector((state) => state.perk.perks)?.slice(0, 4);
   const dragItem = useRef();
   const dragOverItem = useRef();
