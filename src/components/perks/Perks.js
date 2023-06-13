@@ -10,7 +10,8 @@ import Library from "../library/Library";
 
 const Perks = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const perkList = useSelector((state) => state.perk.perks)?.slice(0, 4);
+  const perkList = useSelector((state) => state.perk.perks);
+
   const dragItem = useRef();
   const dragOverItem = useRef();
   const [displayLibrary, setDisplayLibrary] = useState(false);

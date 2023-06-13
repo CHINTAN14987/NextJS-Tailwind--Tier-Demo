@@ -4,6 +4,7 @@ import Image from "next/image";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import add from "/public/Images/add.png";
+import libraryData from ".././../redux/perks.json";
 const Library = () => {
   const disptach = useDispatch();
   const perkData = useSelector((state) => state.perk.perks);
@@ -53,7 +54,7 @@ const Library = () => {
     <div>
       <div className="py-8">
         <h3 className="text-xl text-center font-bold mb-8">Perks Library</h3>
-        {perkData?.map((perk) => {
+        {libraryData?.map((perk) => {
           return (
             <div
               className="flex items-center space-x-4 bg-transparent-black border rounded-xl border-gray-200 shadow-custom-box-shadow p-3 my-4"

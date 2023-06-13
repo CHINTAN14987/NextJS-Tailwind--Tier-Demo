@@ -3,7 +3,7 @@ import data from "./perks.json";
 const perkReducer = createSlice({
   name: "perk",
   initialState: {
-    perks: data,
+    perks: data.slice(0, 4),
     formFields: {
       tierName: "SuperCross",
       class: "Tier II",
