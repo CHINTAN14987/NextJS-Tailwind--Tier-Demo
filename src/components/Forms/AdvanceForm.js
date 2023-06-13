@@ -27,14 +27,16 @@ const AdvanceForm = () => {
   const limitSubscriptionsOnChange = (value) => {
     setLimitSubscriptions(value);
   };
-
+  console.log(inputFields);
   const saveFormDetailsHandler = () => {
     if (
       !inputFields.tierName.trim() ||
       !inputFields.class.trim() ||
       !inputFields.price.trim() ||
       !inputFields.currency.trim() ||
-      inputFields?.description?.trim()?.split("").length > 180
+      !inputFields?.limitationNumber?.trim() ||
+      !inputFields?.description?.trim()?.split("").length > 180 ||
+      !inputFields?.address?.trim()
     ) {
       dispatch(isFormValidated(true));
 
@@ -164,7 +166,7 @@ const AdvanceForm = () => {
               name="address"
               placeholder="Enter Address."
               className={`h-36 pl-3 outline-none cursor-pointer bg-white bg-opacity-100 font-semibold text-base leading-6 rounded-lg placeholder:text-xl p-4 text-custom-gray ${
-                validation && inputFields?.address
+                validation && !inputFields?.address
                   ? "border-red-500 border"
                   : "border border-opacity-6"
               }`}
