@@ -27,7 +27,7 @@ const AdvanceForm = () => {
   const limitSubscriptionsOnChange = (value) => {
     setLimitSubscriptions(value);
   };
-  console.log(inputFields);
+
   const saveFormDetailsHandler = () => {
     if (
       !inputFields.tierName.trim() ||
